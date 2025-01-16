@@ -1,0 +1,1 @@
+export { default as ParallaxCarousel } from './components/ParallaxCarousel/ParallaxCarousel'; 
