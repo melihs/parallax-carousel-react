@@ -179,7 +179,7 @@ const theme = {
 
 ## 📄 License
 
-MIT
+ [MIT](LICENSE)
 
 ## 🤝 Contributing
 

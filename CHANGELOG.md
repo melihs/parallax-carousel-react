@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.4] - 2024-03-21
+### Added
+- Update license link in README.md.
+- Update home page link in package.json
+
 ## [1.0.3] - 2024-03-21
 ### Added
 - Added emoji to the Authors section in README.md.
