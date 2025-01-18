@@ -21,6 +21,7 @@ export const ParallaxCarousel: React.FC<ParallaxCarouselProps> = ({
 	keyboardControl = true,
 }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
+	const [prevSlide, setPrevSlide] = useState(-1);
 	const [isPaused, setIsPaused] = useState(false);
 	const touchStartX = useRef<number>(0);
 	const touchEndX = useRef<number>(0);
@@ -39,30 +40,34 @@ export const ParallaxCarousel: React.FC<ParallaxCarouselProps> = ({
 
 	const handleSlideChange = useCallback(
 		(newIndex: number) => {
-			let finalIndex = newIndex;
+			const currentIndex = currentSlide;
+			let finalIndex;
 
 			if (!infinite) {
 				finalIndex = Math.max(0, Math.min(newIndex, images.length - 1));
 			} else {
-				finalIndex = (newIndex + images.length) % images.length;
+				finalIndex = newIndex < 0 
+					? images.length - 1 
+					: newIndex % images.length;
 			}
-
+			
+			setPrevSlide(currentIndex);
 			setCurrentSlide(finalIndex);
 			onSlideChange?.(finalIndex);
 		},
-		[infinite, images.length, onSlideChange]
+		[infinite, images.length, onSlideChange, currentSlide]
 	);
 
-	// Otomatik geçiş
+	// Auto transition effect
 	useEffect(() => {
-		if (!autoPlay || isPaused) return;
+		if (!autoPlay || isPaused || !images.length) return;
 
 		const timer = setInterval(() => {
 			handleSlideChange(currentSlide + 1);
 		}, interval);
 
 		return () => clearInterval(timer);
-	}, [currentSlide, interval, autoPlay, isPaused, handleSlideChange]);
+	}, [currentSlide, interval, autoPlay, isPaused, handleSlideChange, images.length]);
 
 	// keyboard control
 	useEffect(() => {
@@ -143,7 +148,7 @@ export const ParallaxCarousel: React.FC<ParallaxCarouselProps> = ({
 						key={`${image.url}-${index}`}
 						className={`carousel-slide ${
 							index === currentSlide ? "active" : ""
-						}`}
+						} ${index === prevSlide ? "prev" : ""}`}
 						data-testid={`carousel-slide-${index}`}
 					>
 						<img

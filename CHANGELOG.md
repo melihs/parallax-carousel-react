@@ -1,8 +1,16 @@
 # Changelog
 
-## [Unreleased]
+## [1.0.2] - 2024-03-21
 ### Added
-- Added coverage/ directory to .gitignore
+- Implemented lazy loading for images.
+
+### Changed
+- Updated styles for better responsiveness.
+- Improved performance of the carousel transitions.
+
+### Fixed
+- Fixed a bug causing the carousel to not reset on reaching the last slide.
+- Resolved an issue with keyboard navigation not working correctly.
 
 ## [1.0.1] - 2024-03-21
 ### Changed

@@ -1,19 +1,27 @@
-module.exports = {
-    preset: 'ts-jest',
+export default {
     testEnvironment: 'jsdom',
-    setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-    moduleNameMapper: {
-        '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+    transform: {
+        '^.+\\.(ts|tsx)$': ['ts-jest', {
+            useESM: true,
+            tsconfig: 'tsconfig.json'
+        }],
+        '^.+\\.(js|jsx)$': ['babel-jest', { rootMode: 'upward' }]
     },
-    testMatch: [
-        "<rootDir>/src/__tests__/**/*.test.[jt]s?(x)",
-        "<rootDir>/src/**/?(*.)+(spec|test).[jt]s?(x)"
-    ],
+    moduleNameMapper: {
+        '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+        '^(\\.{1,2}/.*)\\.js$': '$1'
+    },
+    setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+    testMatch: ['<rootDir>/src/**/__tests__/**/*.[jt]s?(x)', '<rootDir>/src/**/?(*.)+(spec|test).[jt]s?(x)'],
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     collectCoverageFrom: [
         'src/**/*.{js,jsx,ts,tsx}',
-        '!src/**/*.d.ts'
+        '!src/**/*.stories.{js,jsx,ts,tsx}',
+        '!src/setupTests.ts',
+        '!.history/**/*'
     ],
-    fakeTimers: {
-        enableGlobally: true
-    }
+    coverageDirectory: 'coverage',
+    coverageReporters: ['text', 'lcov'],
+    extensionsToTreatAsEsm: ['.ts', '.tsx'],
+    testPathIgnorePatterns: ['/node_modules/', '/.history/'],
 }; 

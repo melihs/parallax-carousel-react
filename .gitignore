@@ -2,4 +2,6 @@ node_modules
 dist
 .DS_Store
 .history
+build-storybook.log
+chromatic.config.json
 coverage

@@ -67,7 +67,7 @@ const App = () => {
 	return (
 		<ParallaxCarousel
 			images={images}
-			interval={5000}
+			interval={1000}
 			showArrows={true}
 			showDots={true}
 			showThumbnails={true}
