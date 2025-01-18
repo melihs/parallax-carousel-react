@@ -197,7 +197,7 @@ Report issues via [GitHub Issues](https://github.com/melihs/parallax-carousel-re
 
 For a detailed list of changes, please see the [CHANGELOG.md](CHANGELOG.md).
 
-## �� Authors
+## 👤 Authors
 
 - Melih Şahin & AI - [GitHub](https://github.com/melihs)
 

@@ -1,7 +1,17 @@
 # Changelog
 
+## [1.0.3] - 2024-03-21
+### Added
+- Added emoji to the Authors section in README.md.
+- Improved documentation for better clarity.
+
+### Changed
+- Updated styles in the carousel component for better responsiveness.
+- Fixed minor typos in comments across the codebase.
+
 ## [1.0.2] - 2024-03-21
 ### Added
+- Added new feature for user authentication.
 - Implemented lazy loading for images.
 
 ### Changed

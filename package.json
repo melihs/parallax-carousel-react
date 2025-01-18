@@ -1,6 +1,6 @@
 {
   "name": "parallax-carousel-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A modern, customizable, and responsive React carousel component with parallax effects",
   "type": "module",
   "main": "dist/index.js",
@@ -27,7 +27,16 @@
     "typescript"
   ],
   "author": {
-    "name": "Melih Şahin"
+    "name": "Melih Şahin",
+    "email": "melihsahin24@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melihs/parallax-carousel-react.git"
+  },
+  "homepage": "https://github.com/melihs/parallax-carousel-react#readme",
+  "bugs": {
+    "url": "https://github.com/melihs/parallax-carousel-react/issues"
   },
   "license": "MIT",
   "peerDependencies": {
