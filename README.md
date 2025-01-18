@@ -2,6 +2,10 @@
 
 A modern, customizable, and responsive React carousel component. Includes touch support, parallax effects, and many features.
 
+## Demo
+
+[link](https://65f2e8e9e1fe8b74247ff875-fkwfrvtheq.chromatic.com/?path=/docs/components-parallaxcarousel--docs)
+
 ## 🚀 Features
 
 - ✨ Parallax effects

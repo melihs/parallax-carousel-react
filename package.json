@@ -12,7 +12,8 @@
     "build-storybook": "storybook build",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "files": [
     "dist"
