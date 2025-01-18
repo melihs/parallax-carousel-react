@@ -1,6 +1,6 @@
 {
   "name": "parallax-carousel-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React parallax carousel component with touch support and smooth animations",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

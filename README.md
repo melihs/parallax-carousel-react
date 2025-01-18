@@ -189,15 +189,11 @@ MIT
 
 Report issues via [GitHub Issues](https://github.com/melihs/parallax-carousel-react/issues).
 
-## 📦 Version History
+## Changelog
 
-- **1.0.0**
-  - Initial release
-  - Core carousel features
-  - Touch support
-  - Parallax effects
+For a detailed list of changes, please see the [CHANGELOG.md](CHANGELOG.md).
 
-## 👥 Authors
+## �� Authors
 
 - Melih Şahin & AI - [GitHub](https://github.com/melihs)
 
